@@ -3,10 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 06</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Calculator</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url("background.jpg") no-repeat center center/cover;
+        font-family: Arial, sans-serif;
+      }
+      .calculator {
+        width: 300px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        background-color: black;
+      }
+      .display-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .display {
+        flex-grow: 1;
+        margin-left: 10px;
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        padding: 10px;
+        font-size: 1.5em;
+        border: none;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(0, 0, 0, 0.5);
+      }
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        margin-top: 10px;
+      }
+      button {
+        padding: 15px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(0, 0, 0, 0.5);
+      }
+      button:active {
+        background: rgba(255, 255, 255, 0.8);
+      }
+      .clear {
+        background: #f88;
+      }
+      .equal {
+        background: #7dd;
+      }
+    </style>
   </head>
   <body>
-    <script src="/js/Script.js"></script>
+    <div class="calculator">
+      <div class="display-container">
+        <button class="clear">C</button>
+        <input type="text" class="display" disabled />
+      </div>
+      <div class="buttons">
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>+</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>-</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>/</button>
+        <button>0</button>
+        <button>.</button>
+        <button class="equal">=</button>
+        <button>*</button>
+      </div>
+    </div>
   </body>
 </html>
