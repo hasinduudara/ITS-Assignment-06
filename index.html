@@ -13,6 +13,7 @@
         background: url("background.jpg") no-repeat center center/cover;
         font-family: Arial, sans-serif;
       }
+
       .calculator {
         width: 380px;
         background: rgba(255, 255, 255, 0.2);
@@ -21,11 +22,13 @@
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         background-color: rgb(58, 58, 58);
       }
+
       .display-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
+
       .display {
         flex-grow: 1;
         margin-left: 10px;
@@ -39,12 +42,14 @@
         background: rgba(255, 255, 255, 0.3);
         border: 1px solid rgba(0, 0, 0, 0.5);
       }
+
       .buttons {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 5px;
         margin-top: 10px;
       }
+
       button {
         width: 90px;
         height: 50px;
@@ -56,17 +61,49 @@
         background: rgba(255, 255, 255, 0.5);
         border: 1px solid rgba(0, 0, 0, 0.5);
       }
+
       button:active {
         background: rgba(255, 255, 255, 0.8);
       }
+
       .clear {
         background: rgb(253, 110, 58);
       }
+
       .equal {
-        background: #7dd;
+        background: rgb(58, 213, 169);
       }
+
       .functions {
         background-color: rgb(255, 194, 172);
+      }
+
+      .numbers {
+        background-color: rgb(220, 220, 221);
+      }
+
+      .dot {
+        background-color: rgb(220, 220, 221);
+      }
+
+      .numbers:hover {
+        background-color: rgb(175, 96, 240);
+        color: white;
+      }
+
+      .dot:hover {
+        background-color: rgb(175, 96, 240);
+        color: white;
+      }
+
+      .equal:hover {
+        background-color: rgb(255, 255, 81);
+        color: white;
+      }
+
+      .functions:hover {
+        background-color: rgb(175, 96, 240);
+        color: white;
       }
     </style>
   </head>
@@ -77,21 +114,30 @@
         <input type="text" class="display" disabled />
       </div>
       <div class="buttons">
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
+        <button class="numbers">7</button>
+        <button class="numbers">8</button>
+        <button class="numbers">9</button>
+
         <button class="functions">+</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
+
+        <button class="numbers">4</button>
+        <button class="numbers">5</button>
+        <button class="numbers">6</button>
+
         <button class="functions">-</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
+
+        <button class="numbers">1</button>
+        <button class="numbers">2</button>
+        <button class="numbers">3</button>
+
         <button class="functions">/</button>
-        <button>0</button>
-        <button>.</button>
+
+        <button class="numbers">0</button>
+
+        <button class="dot">.</button>
+
         <button class="equal">=</button>
+
         <button class="functions">*</button>
       </div>
     </div>
